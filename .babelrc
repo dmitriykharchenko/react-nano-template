@@ -1,0 +1,26 @@
+{
+  "presets": ["@babel/react", [
+    "@babel/env", {
+      "targets": {
+        "node": "10"
+      },
+      "exclude": ["transform-regenerator", "babel-plugin-transform-async-to-generator"],
+    }]
+  ],
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/syntax-dynamic-import",
+  ],
+  "env": {
+    "production": {
+      "presets": ["@babel/react", [
+        "@babel/env", {
+          "targets": {
+            "node": "10"
+          },
+          "exclude": ["transform-regenerator", "babel-plugin-transform-async-to-generator"],
+        }]
+      ]
+    },
+  }
+}
